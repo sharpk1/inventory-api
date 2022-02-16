@@ -14,7 +14,9 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DATABASE_NAME": "BookstoreDb",
+        "BOOKS_COLLECTION_NAME": "Books"
       }
     },
     "WebApplication1": {
@@ -25,7 +27,9 @@
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "DATABASE_NAME": "BookstoreDb",
+      "BOOKS_COLLECTION_NAME": "Books"
     }
   }
 }

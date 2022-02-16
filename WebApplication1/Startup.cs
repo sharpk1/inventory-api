@@ -27,6 +27,9 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+            services.AddSingleton<IDbClient, DbClient>(); // allows us to inject IDbClient via dependency injection. It'll be one instance
+            services.Configure<BookstoreDbConfig>(Configuration);
             services.AddTransient<IBookServices, BookServices>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -43,7 +46,13 @@ namespace WebApplication1
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication1 v1"));
+                app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             }
+
+            
 
             app.UseHttpsRedirection();
 

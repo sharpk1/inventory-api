@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kush.shah\\source\\repos\\WebApplication1\\Bookstore.Core\\Bookstore.Core.csproj": {}
+    "C:\\Users\\Kush Shah\\source\\inventory-api\\Bookstore.Core\\Bookstore.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kush.shah\\source\\repos\\WebApplication1\\Bookstore.Core\\Bookstore.Core.csproj": {
+    "C:\\Users\\Kush Shah\\source\\inventory-api\\Bookstore.Core\\Bookstore.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kush.shah\\source\\repos\\WebApplication1\\Bookstore.Core\\Bookstore.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Kush Shah\\source\\inventory-api\\Bookstore.Core\\Bookstore.Core.csproj",
         "projectName": "Bookstore.Core",
-        "projectPath": "C:\\Users\\kush.shah\\source\\repos\\WebApplication1\\Bookstore.Core\\Bookstore.Core.csproj",
-        "packagesPath": "C:\\Users\\kush.shah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kush.shah\\source\\repos\\WebApplication1\\Bookstore.Core\\obj\\",
+        "projectPath": "C:\\Users\\Kush Shah\\source\\inventory-api\\Bookstore.Core\\Bookstore.Core.csproj",
+        "packagesPath": "C:\\Users\\Kush Shah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kush Shah\\source\\inventory-api\\Bookstore.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kush.shah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kush Shah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,7 +40,15 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
+            "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.14.1, )"
             }
@@ -60,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

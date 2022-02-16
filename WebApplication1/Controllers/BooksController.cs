@@ -23,5 +23,32 @@ namespace WebApplication1.Controllers
         {
             return Ok(_bookServices.GetBooks());
         }
+
+        [HttpGet("{id}", Name = "GetBook")]
+        public IActionResult GetBook(string id)
+        {
+            return Ok(_bookServices.GetBook(id));
+        }
+
+        [HttpPost]
+        public IActionResult AddBook(Book book)
+        {
+            _bookServices.AddBook(book);
+            return CreatedAtRoute("GetBook", new { id = book.Id }, book);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBook(string id)
+        {
+            _bookServices.DeleteBook(id);
+            return NoContent();
+        }
+
+        [HttpPut]
+        public IActionResult UpdateBook(Book book)
+        {
+            return Ok(_bookServices.UpdateBook(book));
+        }
+
     }
 }
